@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="static/styles1.css">
+</head>
+<body>
+    <header>
+        <h1>AI Gym Buddy...</h1>
+    </header>
+    
+    <main>
+        <section id="login-section">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" name="login-email" required>
+                
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="login-password" required>
+                
+                <button type="submit">Login</button>
+            </form>
+            <a href="signup" class="back-button">← Signup</a> <!-- Back to Signup button -->
+        </section>
+    </main>
+
+    <script>
+        const loginForm = document.getElementById('login-form');
+        loginForm.addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const email = document.getElementById('login-email').value.trim();
+            const password = document.getElementById('login-password').value.trim();
+
+            // Check if both fields are filled
+            if (!email || !password) {
+                alert("Please fill in both email and password.");
+                return;
+            }
+
+            try {
+                const response = await fetch('/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email, password }),
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    alert(result.success);
+                    window.location.href = '/profile'; // Redirect to the profile page after successful login
+                } else {
+                    alert(result.error); // Show the error message
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("An error occurred, please try again.");
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-image: url('background.jpg'); /* Path to your background image */
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    position: relative; /* For footer alignment */
+    min-height: 100vh; /* Ensure the body takes at least full viewport height */
+    color: #ffffff; /* Default text color */
+    display: flex; /* Enable flexbox for centering */
+    flex-direction: column; /* Ensure the header stays at the top */
+    align-items: center; /* Horizontally center the content */
+    justify-content: center; /* Vertically center the content */
+}
+
+/* Header */
+header {
+    background: rgba(255, 0, 0, 0.5); /* Red background with transparency */
+    color: #ffffff;
+    width: 100%; /* Ensure the header spans the full width */
+    padding: 10px 0; /* Smaller header padding */
+    text-align: center;
+    position: relative; /* Enables positioning of nav */
+}
+
+header h1 {
+    font-size: 36px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Slight shadow for better readability */
+}
+
+/* Main Container */
+main {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    border-radius: 10px;
+    padding: 30px 20px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    align-items: center;
+    margin-top: 20px; /* Optional: To add some spacing below the header */
+}
+
+/* Form Section */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input Fields */
+input[type="text"], input[type="email"], input[type="password"],
+select, input[type="radio"], input[type="checkbox"] {
+    width: 100%;
+    padding: 15px; /* Increased padding for larger box */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    background-color: white; /* Set background color to white */
+}
+
+/* Option Picking (Dropdown / Radio Buttons) Focus */
+select:focus, input[type="radio"]:focus, input[type="checkbox"]:focus {
+    border-color: rgb(44, 222, 88);
+    box-shadow: 0 0 8px rgb(44, 222, 88);
+}
+
+/* Buttons */
+button {
+    background-color: rgb(44, 222, 88);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: rgb(34, 192, 78);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Back Button */
+.back-button {
+    display: inline-block;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-button:hover {
+    color: rgb(44, 222, 88);
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    main {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+
+/* Styling for Dropdown (Select) */
+select {
+    background-color: white; /* Set background to white */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: black; /* Text color inside the select box */
+    font-size: 16px;
+    padding: 15px; /* Increased padding for better height */
+    cursor: pointer;
+    width: 108%; /* Increase the length of the dropdown box (wider) */
+    max-width: 500px; /* Ensure the dropdown doesn't stretch too wide */
+}
+
+/* Removed the hover effect from the select */
+select:hover {
+    background-color: white; /* No change on hover */
+}
+
+/* Styling for Radio Buttons */
+input[type="radio"] {
+    margin-right: 15px;  /* Space between radio and label */
+    accent-color: rgb(44, 222, 88); /* Color the radio button */
+    width: 30px; /* Increase size of radio button */
+    height: 30px; /* Increase size of radio button */
+}
+
+input[type="radio"]:checked {
+    background-color: rgb(44, 222, 88);  /* Green when checked */
+}
+
+/* Styling for Checkboxes */
+input[type="checkbox"] {
+    margin-right: 15px; /* Space between checkbox and label */
+    accent-color: rgb(44, 222, 88); /* Green color for checkbox */
+    width: 30px; /* Increase size of checkbox */
+    height: 30px; /* Increase size of checkbox */
+}
+
+input[type="checkbox"]:checked {
+    background-color: rgb(44, 222, 88);  /* Green when checked */
+}
+/* Buttons */
+button {
+    background-color: rgb(44, 222, 88);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    width: 108%; /* Set width to 100% to make the buttons take up full width of the parent container */
+    max-width: 500px; /* Optional: limit max width if necessary */
+}
+
+button:hover {
+    background-color: rgb(34, 192, 78);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}

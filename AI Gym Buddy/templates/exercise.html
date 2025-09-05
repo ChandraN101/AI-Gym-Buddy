@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='exercisestyle.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Exercises</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('diet_plan') }}">Diet Suggestion</a></li>
+                <li><a href="{{ url_for('performance') }}">Performance Analysis</a></li>
+                <li><a href="{{ url_for('profile_details') }}">Profile Details</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>User Summary</h2>
+        <div>{{ result.user_summary | safe }}</div>
+<br>
+        <h2>10-Day Workout Routine</h2>
+<div>{{ result.workout_routine | safe }}</div>
+
+<h2>10 Exercises</h2>
+<div>{{ result.exercises | safe }}</div>
+
+
+           </section>
+
+</body>
+</html>

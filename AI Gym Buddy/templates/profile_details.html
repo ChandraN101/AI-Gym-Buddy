@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Profile Analysis</h1>
+    </header>
+
+    <main>
+        <h2>Results</h2>
+        <p><strong>BMI:</strong> {{ bmi }}</p>
+        <p><strong>BMI Category:</strong> {{ bmi_category }}</p>
+        <p><strong>Experience Level:</strong> {{ experience }}</p>
+        <p><strong>Weight:</strong> {{ weight }} kg</p>
+        <p><strong>Height:</strong> {{ height }} m</p>
+        <p><strong>Age:</strong> {{ age }}</p>
+        <p><strong>Gender:</strong> {{ gender }}</p>
+        <p><strong>Injury:</strong> {{ injury }}</p>
+        <p><strong>Medication:</strong> {{ medication }}</p>
+
+        <!-- Go Back to Exercise Page -->
+        <a href="{{ url_for('exercise') }}" class="button">Go Back to Exercise</a>
+
+        <!-- Re-Enter Button -->
+        <a href="{{ url_for('profile') }}" class="button re-enter-button">Re-Enter Details</a>
+
+        <!-- Logout Button -->
+        <a href="{{ url_for('login') }}" class="button logout-button">Logout</a>
+    </main>
+</body>
+</html>

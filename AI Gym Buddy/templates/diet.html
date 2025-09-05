@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Suggestions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Diet Suggestions</h1>
+    </header>
+    
+    <main>
+        <h2>Pre-Workout Foods</h2>
+        <ul>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/bananas.jpg') }}" alt="Bananas">
+                <span>Bananas: A quick source of carbohydrates and potassium to sustain energy.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{url_for('static', filename='images/oats.jpg')}}" alt="Oats">
+                <span>Oats: Slow-digesting carbs for long-lasting energy.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{url_for('static', filename='images/greek-yogurt.jpg')}}" alt="Greek Yogurt">
+                <span>Greek Yogurt with Berries: A mix of protein and simple carbs for quick digestion.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{url_for('static', filename='images/brown-rice.jpg')}}" alt="Brown Rice with Chicken">
+                <span>Brown Rice with Chicken: A balanced meal of complex carbs and lean protein.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{url_for('static', filename='images/peanut-butter-bread.jpg')}}" alt="Peanut Butter on Bread">
+                <span>Peanut Butter on Whole Grain Bread: Provides healthy fats and carbs for sustained energy.</span>
+            </li>
+            <!-- Added more pre-workout foods -->
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/almonds.jpg') }}" alt="Almonds">
+                <span>Almonds: Packed with protein and healthy fats for a steady energy boost.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/berries.jpg') }}" alt="Berries">
+                <span>Mixed Berries: Full of antioxidants and natural sugars for a quick energy surge.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/sweet-potato.jpg') }}" alt="Sweet Potatoes">
+                <span>Sweet Potatoes: A complex carb providing steady energy release.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/apple.jpg') }}" alt="Apple">
+                <span>Apple: A refreshing source of fiber and simple carbs for quick energy.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/chia-seeds.jpg') }}" alt="Chia Seeds">
+                <span>Chia Seeds: Rich in omega-3 fatty acids and fiber for sustained energy.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/whole-grain-cereal.jpg') }}" alt="Whole Grain Cereal">
+                <span>Whole Grain Cereal: Provides fiber and long-lasting energy.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/eggs.jpg') }}" alt="Eggs">
+                <span>Eggs: High in protein, helping with muscle repair and energy.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/greek-yogurt-banana.jpg') }}" alt="Greek Yogurt with Banana">
+                <span>Greek Yogurt with Banana: A great balance of protein and fast-digesting carbs.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/energy-bar.jpg') }}" alt="Energy Bar">
+                <span>Energy Bar: Convenient and packed with carbs and a bit of protein for pre-workout energy.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/mixed-nuts.jpg') }}" alt="Mixed Nuts">
+                <span>Mixed Nuts: A small portion provides healthy fats and quick calories for sustained energy.</span>
+            </li>
+        </ul>
+        
+        <h2>Post-Workout Foods</h2>
+        <ul>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/chicken.jpg') }}" alt="Grilled Chicken">
+                <span>Grilled Chicken or Turkey: Rich in lean protein for muscle repair.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/eggs.jpg') }}" alt="Eggs">
+                <span>Eggs: High in protein and essential amino acids.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/quinoa.jpg') }}" alt="Quinoa">
+                <span>Quinoa or Sweet Potatoes: Complex carbs to restore energy.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/salmon.jpg') }}" alt="Salmon">
+                <span>Salmon or Tuna: Packed with omega-3 fatty acids and protein for recovery.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/protein-shake.jpg') }}" alt="Protein Shake">
+                <span>Protein Shake: Whey protein with a banana for immediate recovery.</span>
+            </li>
+            <!-- Added more post-workout foods -->
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/tofu.jpg') }}" alt="Tofu">
+                <span>Tofu: A plant-based protein to aid muscle recovery.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/greek-yogurt.jpg') }}" alt="Greek Yogurt">
+                <span>Greek Yogurt: Packed with protein and probiotics for digestion.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/lean-beef.jpg') }}" alt="Lean Beef">
+                <span>Lean Beef: High-quality protein for muscle repair.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/paneer.jpg') }}" alt="Paneer">
+                <span>Paneer: A good source of protein and calcium.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/spinach.jpg') }}" alt="Spinach">
+                <span>Spinach: Rich in iron and vitamins, helping with muscle recovery.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/berries-yogurt.jpg') }}" alt="Berries with Yogurt">
+                <span>Berries with Yogurt: A combination of antioxidants and protein to aid recovery.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/avocado-chicken.jpg') }}" alt="Avocado with Chicken">
+                <span>Avocado with Chicken: A healthy mix of fats, protein, and fiber.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/soy-milk.jpg') }}" alt="Soy Milk">
+                <span>Soy Milk: Plant-based protein for recovery.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/cottage-cheese.jpg') }}" alt="Cottage Cheese">
+                <span>Cottage Cheese: Packed with casein protein, perfect for muscle recovery and overnight repair.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/banana-almond.jpg') }}" alt="Banana with Almond Butter">
+                <span>Banana with Almond Butter: Combines simple carbs and healthy fats to refuel muscles.</span>
+            </li>
+        </ul>
+
+        <h2>Protein Sources for Muscle Growth</h2>
+        <ul>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/lean-meats.jpg') }}" alt="Lean Meats">
+                <span>Lean Meats: Chicken breast, turkey, lean beef.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/fish.jpg') }}" alt="Fish">
+                <span>Fish: Salmon, cod, mackerel for protein and healthy fats.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/eggs.jpg') }}" alt="Eggs">
+                <span>Eggs: A complete protein source.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/cottage-cheese.jpg') }}" alt="Cottage Cheese">
+                <span>Cottage Cheese: Casein protein for slow digestion (great before bed).</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/plant-proteins.jpg') }}" alt="Plant-Based Proteins">
+                <span>Plant-Based Proteins: Lentils, chickpeas, and tofu for vegetarians/vegans.</span>
+            </li>
+            <!-- Added more protein sources -->
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/chia-seeds.jpg') }}" alt="Chia Seeds">
+                <span>Chia Seeds: Packed with protein and fiber for muscle repair.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/seeds.jpg') }}" alt="Sunflower Seeds">
+                <span>Sunflower Seeds: High in protein, healthy fats, and essential nutrients.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/edamame.jpg') }}" alt="Edamame">
+                <span>Edamame: A great source of plant-based protein for muscle growth.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/pumpkin-seeds.jpg') }}" alt="Pumpkin Seeds">
+                <span>Pumpkin Seeds: A rich source of protein and magnesium.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/tempeh.jpg') }}" alt="Tempeh">
+                <span>Tempeh: A fermented soy product high in protein for muscle repair.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/peanut-butter.jpg') }}" alt="Peanut Butter">
+                <span>Peanut Butter: A protein-rich spread perfect for muscle-building snacks.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/yogurt.jpg') }}" alt="Yogurt">
+                <span>Yogurt: High in protein and probiotics, supporting muscle repair and gut health.</span>
+            </li>
+        </ul>
+
+        <h2>Healthy Fats for Sustained Energy</h2>
+        <ul>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/avocado.jpg') }}" alt="Avocado">
+                <span>Avocado: Healthy monounsaturated fats.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/nuts-and-seeds.jpg') }}" alt="Nuts and Seeds">
+                <span>Nuts and Seeds: Almonds, walnuts, chia seeds, flaxseeds.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/olive-oil.jpg') }}" alt="Olive Oil">
+                <span>Olive Oil: For cooking or salad dressing.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/fatty-fish.jpg') }}" alt="Fatty Fish">
+                <span>Fatty Fish: Sardines, salmon for omega-3 fatty acids.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/nut-butters.jpg') }}" alt="Nut Butters">
+                <span>Nut Butters: Almond or peanut butter in moderation.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/coconut.jpg') }}" alt="Coconut">
+                <span>Coconut: Contains medium-chain triglycerides (MCTs) for quick energy.</span>
+            </li>
+        </ul>
+        
+        <h2>Complex Carbs for Energy</h2>
+        <ul>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/brc.jpg') }}" alt="Brown Rice and Whole Grains">
+                <span>Brown Rice and Whole Grains: Whole grains like brown rice may also lower total and LDL (“bad”) cholesterol..</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/swp.jpg') }}" alt="Sweet Potatoes">
+                <span>
+                    Sweet potatoes are a nutrient powerhouse, packed with antioxidants that boost immunity, fight cancer, and improve gut, heart, and eye health.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/oml.jpg') }}" alt="Oatmeal">
+                <span>Oatmeal helps lower blood sugar and cholesterol, reduces skin irritation and constipation, is filling, versatile, and supports weight loss.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/lgm.jpg') }}" alt="Legumes">
+                <span>Legumes are nutrient-dense, low-calorie foods high in fiber and protein, providing steady energy and helping to lower blood sugar and blood pressure.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/quinoa.jpg') }}" alt="Quinoa">
+                <span>Quinoa: A gluten-free grain rich in fiber, protein, and essential amino acids, perfect for sustained energy release.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/barleyp.jpg') }}" alt="Barley">
+                <span>Barley: A whole grain with high levels of fiber that improves digestion, regulates blood sugar, and provides long-lasting energy.</span>
+            </li>
+        </ul>
+
+        <h2>Hydration and Recovery Foods</h2>
+        <ul>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/cwi.jpg') }}" alt="Coconut Water">
+                <span>Coconut water is a naturally sweet drink packed with vitamins and electrolytes, supporting heart health, stabilizing blood sugar, and offering benefits for those who exercise frequently or experience chronic diarrhea.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/wtm.jpg') }}" alt="Water melon">
+                <span>Eating watermelon before bedtime promotes hydration, provides essential nutrients, and may help prevent heart disease by reducing fatty deposits in blood vessels and blocking harmful cholesterol buildup.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/lgs.jpg') }}" alt="Dark Leafy Greens">
+                <span>Dark leafy greens are rich in vitamins, minerals, and fiber, helping to prevent certain cancers and promote heart health.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/grt.jpg') }}" alt="Green Tea">
+                <span>Green tea offers various health benefits, including weight management, skin inflammation reduction, improved cardiovascular health, and a high concentration of antioxidants</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/oranges.jpg') }}" alt="Oranges">
+                <span>Oranges: High in vitamin C and water content, they keep you hydrated and help reduce muscle soreness after exercise.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/yogurt.jpg') }}" alt="Low-Fat Yogurt">
+                <span>Low-Fat Yogurt: Packed with probiotics, protein, and hydration benefits, it supports muscle recovery and gut health.</span>
+            </li>
+        </ul>
+        
+        <h2>Snacks for On-the-Go Nutrition</h2>
+        <ul>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/trx.jpg') }}" alt="Trail Mix">
+                <span>Trail mix is a convenient, customizable snack rich in protein and heart-healthy fats.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/hbe.jpg') }}" alt="Hard-Boiled Eggs">
+                <span>Hard-Boiled Eggs: Portable protein.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/prtbrs.jpg') }}" alt="Protein Bars">
+                <span>Protein bars offer a quick, convenient source of protein and calories, helping to boost nutrient intake and support health goals.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/grkyog.jpg') }}" alt="Greek Yogurt">
+                <span>Greek yogurt is a protein-rich yogurt packed with nutrients like vitamin B12, calcium, and selenium, supporting muscle, bone, and gut health.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/rcab.jpg') }}" alt="Rice Cakes with Almond Butter">
+                <span>Rice cakes made from whole grains, paired with almond butter, offer a nutrient-dense, healthy snack that supports your body's nutritional needs.</span>
+            </li>
+            <li class="food-item">
+                <img src="{{ url_for('static', filename='images/fruit.jpg') }}" alt="Fresh Fruits">
+                <span>Fresh Fruits: Apples, bananas, or oranges provide natural sugars, vitamins, and hydration for a quick energy boost.</span>
+            </li>
+        </ul>
+    </main>
+    <main>
+        <!-- Go Back to Exercise Page -->
+        <a href="{{ url_for('exercise') }}" class="button">Go Back to Exercise</a>
+        <main>
+</body>
+</html>

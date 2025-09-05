@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Weight Analysis</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Weight Analysis</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Enter Your Data</h2>
+            <form id="data-form">
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+                
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" step="0.1" required>
+                
+                <button type="button" id="add-data">Add Data</button>
+            </form>
+        </section>
+        <section>
+            <h2>Performance Graph</h2>
+            <canvas id="performanceChart"></canvas>
+        </section>
+        <section>
+            <h2>Analysis</h2>
+            <div id="analysis">
+                <p id="highest">Highest Weight: --</p>
+                <p id="lowest">Lowest Weight: --</p>
+            </div>
+            <!-- Moved reset button here -->
+            <button type="button" id="reset-data" class="reset-button">Reset</button>
+        </section>
+    </main>
+
+    <script>
+        // Initialize data storage
+        const storedData = JSON.parse(localStorage.getItem('weightData')) || { dates: [], weights: [] };
+
+        // Form elements
+        const dateInput = document.getElementById('date');
+        const weightInput = document.getElementById('weight');
+        const addDataButton = document.getElementById('add-data');
+        const resetDataButton = document.getElementById('reset-data');
+        const highestElem = document.getElementById('highest');
+        const lowestElem = document.getElementById('lowest');
+
+        // Function to update highest and lowest values
+        function updateHighLowValues() {
+            if (storedData.weights.length === 0) {
+                highestElem.textContent = 'Highest Weight: --';
+                lowestElem.textContent = 'Lowest Weight: --';
+                return;
+            }
+
+            const maxWeight = Math.max(...storedData.weights);
+            const minWeight = Math.min(...storedData.weights);
+            const maxIndex = storedData.weights.indexOf(maxWeight);
+            const minIndex = storedData.weights.indexOf(minWeight);
+
+            highestElem.textContent = `Highest Weight: ${maxWeight} kg on ${storedData.dates[maxIndex]}`;
+            lowestElem.textContent = `Lowest Weight: ${minWeight} kg on ${storedData.dates[minIndex]}`;
+        }
+
+        // Initialize Chart.js chart
+        const ctx = document.getElementById('performanceChart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: storedData.dates,
+                datasets: [{
+                    label: 'Weight Progress', // Label will be updated dynamically
+                    data: storedData.weights,
+                    borderColor: 'rgba(75, 192, 75, 1)', // Default green
+                    backgroundColor: 'rgba(75, 192, 75, 0.2)', // Default light green
+                    tension: 0.3,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: { title: { display: true, text: 'Date' } },
+                    y: { title: { display: true, text: 'Weight (kg)' }, beginAtZero: false }
+                }
+            }
+        });
+
+        // Function to update chart with new data and dynamic label
+        function updateChart() {
+            const lastWeight = storedData.weights[storedData.weights.length - 1];
+            const previousWeight = storedData.weights[storedData.weights.length - 2];
+
+            // Determine the color and label of the entire line
+            let color = 'rgba(75, 192, 75, 1)'; // Green (gain) by default
+            let label = 'Weight Progress (Gain)'; // Default label
+
+            if (previousWeight && lastWeight < previousWeight) {
+                color = 'rgba(192, 75, 75, 1)'; // Red (loss)
+                label = 'Weight Progress (Loss)';
+            }
+
+            // Update the chart
+            chart.data.labels = storedData.dates;
+            chart.data.datasets[0].data = storedData.weights;
+            chart.data.datasets[0].borderColor = color;
+            chart.data.datasets[0].backgroundColor = color.replace('1)', '0.2)'); // Light red or green
+            chart.data.datasets[0].label = label; // Update the label dynamically
+            chart.update();
+
+            // Update highest and lowest values
+            updateHighLowValues();
+        }
+
+        // Add new data point
+        addDataButton.addEventListener('click', () => {
+            const date = dateInput.value;
+            const weight = parseFloat(weightInput.value);
+
+            // Validate inputs
+            if (!date || isNaN(weight)) {
+                alert('Please enter valid date and weight.');
+                return;
+            }
+
+            // Update stored data
+            storedData.dates.push(date);
+            storedData.weights.push(weight);
+
+            // Save data locally
+            localStorage.setItem('weightData', JSON.stringify(storedData));
+
+            // Update chart
+            updateChart();
+
+            // Clear inputs
+            dateInput.value = '';
+            weightInput.value = '';
+        });
+
+        // Reset all data
+        resetDataButton.addEventListener('click', () => {
+            // Clear localStorage
+            localStorage.removeItem('weightData');
+
+            // Reset stored data
+            storedData.dates = [];
+            storedData.weights = [];
+
+            // Update chart
+            updateChart();
+        });
+
+        // Initial chart rendering
+        updateChart();
+    </script>
+    <main>
+            <!-- Go Back to Exercise Page -->
+            <a href="{{ url_for('exercise') }}" class="button">Go Back to Exercise</a>
+            <main>
+</body>
+</html>

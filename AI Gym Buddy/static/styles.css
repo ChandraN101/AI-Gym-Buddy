@@ -1,0 +1,383 @@
+/* Define the custom font */
+@font-face {
+    font-family: 'Roboto';
+    src: url('path-to-your-font/font-file.ttf') format('truetype');
+}
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-image: url('background.jpg'); /* Path to your background image */
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    position: relative; /* For footer alignment */
+    min-height: 100vh; /* Ensure the body takes at least full viewport height */
+    color: #ffffff; /* Default text color */
+}
+
+/* Header Styles */
+header {
+    background: rgba(255, 0, 0, 0.5); /* Red background with transparency */
+    color: #ffffff;
+    padding: 10px 0; /* Smaller header padding */
+    text-align: center;
+    position: relative; /* Enables positioning of nav */
+}
+
+nav {
+    position: absolute; /* Allows positioning in header */
+    top: 20px;
+    right: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #45a049;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 900px;
+    margin: 40px auto; /* Center content with top spacing */
+    padding: 20px;
+    background: transparent; /* Transparent background */
+    border-radius: 5px;
+    box-shadow: none; /* No shadow */
+}
+
+/* Update to adjust the image dimensions to 3cm by 2cm */
+.food-item img {
+    width: 3cm;  /* Set width to 3cm */
+    height: 2.5cm; /* Set height to 2cm */
+    object-fit: cover; /* Ensure the image fits without distortion */
+}
+
+/* Flexbox Layout for Food Items */
+ul {
+    list-style-type: none; /* Remove default list bullets */
+    padding: 0;
+    margin: 0;
+}
+
+.food-item {
+    display: inline-flex; /* Display items in a row */
+    flex-direction: column; /* Stack image and text vertically */
+    justify-content: center; /* Center the content */
+    align-items: center; /* Center items horizontally */
+    width: 30%; /* Adjust width of each item, 3 items per row */
+    margin: 10px; /* Add space between items */
+    text-align: center; /* Center the text below the image */
+}
+
+.food-item img {
+    width: 100%; /* Make images responsive */
+    max-width: 6cm; /* Limit max size of the image */
+    height: 4.5cm; /* Keep aspect ratio */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.food-item span {
+    font-size: 14px; /* Adjust font size */
+    color: #ffff; /* Dark text color for visibility */
+}
+
+
+.welcome-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.welcome-container h2 {
+    font-size: 2rem;
+    color: #2cde58;
+}
+
+.welcome-container blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #555;
+    margin: 20px 0;
+}
+
+.button-group {
+    margin-top: 30px;
+}
+
+.login-button, .signup-button {
+    display: inline-block;
+    background-color: #2cde58;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover, .signup-button:hover {
+    background-color: #249c45; /* Darker green for hover */
+}
+
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 768px) {
+    .food-item {
+        width: 45%; /* Adjust to 2 items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .food-item {
+        width: 100%; /* Stack items on top of each other on very small screens */
+    }
+}
+
+/* Join Button Styles */
+.join-container {
+    display: flex; /* Flexbox for alignment */
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.join-button {
+    display: inline-block;
+    background: #45a049;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 20px;
+    transition: background 0.3s ease;
+}
+
+.join-button:hover {
+    background: #388e3c;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #ffffff; /* Ensure label color is white */
+}
+
+form input,
+form select,
+form button {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: #35424a;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #45a049;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 20px;
+}
+
+section h3 {
+    border-bottom: 2px solid #35424a;
+    padding-bottom: 5px;
+}
+
+section div {
+    font-size: 24px;
+    padding-bottom: 5px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    position: absolute; /* Footer at the bottom */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    color: #ffffff; /* Text color */
+    background: rgba(0, 0, 0, 0.5); /* Transparent dark background */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav {
+        position: static; /* Default positioning for small screens */
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        display: block; /* Stack nav items vertically */
+        margin: 10px 0;
+    }
+
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .join-container {
+        flex-direction: column; /* Stack text and button vertically */
+    }
+
+    .join-button {
+        margin-left: 0; /* Reset margin */
+        margin-top: 10px; /* Add spacing */
+    }
+}
+
+/* Button Styles */
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 10px 5px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.back-button {
+    background-color: #28a745;
+}
+
+.back-button:hover {
+    background-color: #218838;
+}
+
+.re-enter-button {
+    background-color: #ffc107;
+    color: black;
+}
+
+.re-enter-button:hover {
+    background-color: #e0a800;
+}
+
+.logout-button {
+    background-color: #dc3545;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+}
+
+/* Apply globally to the body */
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* Use Roboto with a fallback to Arial */
+}
+
+/* Specific headings */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600; /* Optional: Set font weight */
+}
+
+/* Specific sections or elements */
+nav ul li a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem; /* Optional: Set font size */
+}
+
+form label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.button {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* General Button Styling */
+button {
+    display: inline-block;
+    padding: 10px 20px;  /* Ensure both buttons have the same padding */
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;  /* Default blue background */
+    border: 1px solid #007bff;  /* Same border style as background color */
+    border-radius: 5px;  /* Same rounded corners */
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;  /* Smooth hover transition for background and border */
+}
+
+/* Hover Effect for Both Buttons */
+button:hover {
+    background-color: #0056b3;  /* Darker blue on hover */
+    border-color: #0056b3;  /* Border changes to match background on hover */
+}
+
+/* Reset Button Specific Styling (Increased Length) */
+button.reset-button {
+    background-color: #28a745;  /* Green background for reset button */
+    border-color: #28a745;  /* Green border for reset button */
+    width: 900px;  /* Increase the length of the reset button */
+}
+
+button.reset-button:hover {
+    background-color: #218838;  /* Darker green on hover */
+    border-color: #218838;  /* Border changes to darker green on hover */
+}
+
+/* Add Data Button (remains unchanged) */
+button#add-data {
+    background-color: #007bff;  /* Blue background for Add button */
+    border-color: #007bff;  /* Blue border for Add button */
+}
+
+button#add-data:hover {
+    background-color: #0056b3;  /* Darker blue on hover */
+    border-color: #0056b3;  /* Border changes to darker blue on hover */
+}   
+

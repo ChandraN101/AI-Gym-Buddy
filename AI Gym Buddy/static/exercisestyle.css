@@ -1,0 +1,100 @@
+/* General styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    background: rgba(255, 0, 0, 0.5);
+    color: #ffffff;
+    padding: 0.5px 0; /* Reduced padding for a smaller header */
+}
+
+h1 {
+    text-align: center;
+    font-size: 34px; /* Maintain original font size */
+    margin-top: 10px; /* Reduced margin for the title */
+}
+
+nav ul {
+    text-align: right;
+    margin-top: -20px; /* Reduced spacing above navigation */
+    margin-right: 10px;
+    font-size: 18px; /* Maintain original font size */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px; /* Reduced spacing between navigation items */
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #45a049;
+}
+
+/* Section Styles */
+section {
+    max-width: 1500px;
+    margin: 10px auto; /* Reduced spacing between sections */
+    padding: 20px; /* Maintain original padding inside sections */
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    font-weight: lighter;
+}
+
+section h2 {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+    margin-bottom: 10px; /* Reduced margin after the section title */
+    font-size: 28px; /* Maintain original font size */
+}
+
+section div {
+    font-size: 21px; /* Maintain original font size */
+    margin-bottom: 20px; /* Reduced spacing between section content */
+}
+
+/* General Styling */
+.workout-routine {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+}
+
+/* Day Titles - Styling */
+.workout-routine div.day-title {
+    color: red; /* Day title in red */
+    font-weight: bold;
+    font-size: 26px; /* Maintain original font size */
+    margin: 10px 0; /* Adjusted spacing around day titles */
+}
+
+/* Exercise content */
+.workout-routine div.exercise-content {
+    color: #ffffff;
+    margin-left: 20px; /* Indent for exercise content */
+    font-weight: 100; /* Regular font weight */
+    margin-top: 5px; /* Small gap between exercises */
+    margin-bottom: 5px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px 0; /* Reduced padding in footer */
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.5);
+}

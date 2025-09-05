@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Result</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Profile Analysis</h1>
+    </header>
+
+    <main>
+        <h2>Results</h2>
+        <p><strong>BMI:</strong> {{ bmi }}</p>
+        <p><strong>BMI Category:</strong> {{ bmi_category }}</p>
+        <p><strong>Experience Level:</strong> {{ experience }}</p>
+        <p><strong>Weight:</strong> {{ weight }} kg</p>
+        <p><strong>Height:</strong> {{ height }} cm</p>
+        <p><strong>Age:</strong> {{ age }}</p>
+        <p><strong>Gender:</strong> {{ gender }}</p>
+        <p><strong>Injury:</strong> {{ injury }}</p>
+        <p><strong>Medication:</strong> {{ medication }}</p>
+        <h3>Recommendation:</h3>
+        <ol>
+            {% for sentence in recommendation %}
+                <li>{{ sentence }}</li>
+            {% endfor %}
+        </ol>
+        <a href="/profile" class="button">Go Back</a>
+        
+
+    </main>
+</body>
+</html>
